@@ -83,7 +83,7 @@ public class LabelingFromFile<T extends RealType<T>> implements Command {
 	}
 
 	private Interval parse(String content) {
-		String[] roiDef = content.split(",");
+		String[] roiDef = content.trim().split(",");
 		int width = (int) Double.parseDouble(roiDef[0]);
 		int height = (int) Double.parseDouble(roiDef[1]);
 		int x = Integer.parseInt(roiDef[3]);
